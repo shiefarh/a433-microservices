@@ -1,0 +1,18 @@
+version: "2.13.0"
+
+services:
+  item-db:
+    images:mongo:3
+    restart: always
+    volumes:
+    -app-db:/data/db
+
+  item-app:
+    image:shiefarh/item-app:v1
+    restart: always
+    ports:
+    -80:8080
+
+  volumes:
+  app-db
+
