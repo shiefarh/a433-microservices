@@ -1,16 +1,20 @@
+#menentukan cersi docker compose
 version: "2.13.0"
 
+#membuat service container item-db dengan image mongodb dan volume
 services:
   item-db:
     image: mongo:3
     volumes:
     - app-db:/data/db
 
+#membuat service container item-app dengan image dari dockerhub dan menentukan portnya
   item-app:
     image: shiefarh/item-app:v1
     ports:
     - 80:8080
 
+#volume container
 volumes:
   app-db:
 
