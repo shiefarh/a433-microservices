@@ -13,7 +13,8 @@ services:
   item-app:
     image: shiefarh/item-app:v1
     restart: always
-    depends_on: item_db
+    depends_on: 
+    - item-db
     ports:
     - 80:8080
 
